@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id" class="transition-colors duration-500">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAJIKU - Simulasi Gaji</title>
+
+  <!-- PWA -->
+ <link rel="manifest" href="./frontend/manifest.json" />
+ <meta name="theme-color" content="#0f172a" />
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./main/main.css">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+</head>
+
+<body class="bg-gradient-to-b from-blue-50 to-blue-100 dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-gray-200">
+
+  <div id="app"></div>
+
+  <!-- JavaScript Bundle -->
+  <script src="/bundle.js"></script>
+
+
+
+  <!-- Register Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js');
+      });
+    }
+  </script>
+
+</body>
+</html>
