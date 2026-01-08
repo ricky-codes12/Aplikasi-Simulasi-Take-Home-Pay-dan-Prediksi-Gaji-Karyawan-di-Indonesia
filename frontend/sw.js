@@ -3,7 +3,7 @@ const ASSETS = [
   "./",
   "./index.html",
   "./dist/bundle.js",
-  "./frontend/manifest.json"
+  "./manifest.json"
 ];
 
 self.addEventListener("install", event => {
